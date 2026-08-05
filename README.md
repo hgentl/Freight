@@ -1,0 +1,61 @@
+## Project Outline
+This project was developed as part of the M250 Object-Oriented Java Programming module at The Open University. It models a freight company's booking system using object-oriented design principles to represent different freight services, their pricing rules, and their shared behaviour.
+
+### Assignment Context
+This project challenged me to design a small but extensible object model. Rather than implementing each freight service independently, I identified the behaviour they shared and modelled it in a common base class, allowing specialised services to extend that functionality where required.
+
+---
+## Features
+* Models different freight service types.
+* Calculates service prices based on freight characteristics.
+* Uses a common abstraction to represent different freight types
+* Demonstrates polymorphic price calculation through a shared interface.
+
+---
+## Design Decisions
+The project separates shared freight behaviour into an abstract Freight class while allowing specialised freight services to extend and customise that behaviour. Pricing is represented through a dedicated interface, demonstrating how inheritance and interfaces can be combined to create a flexible object-oriented design.
+
+### Abstract Classes
+The different freight services all share common information, such as customer details and pricing behaviour. Rather than duplicating this logic across multiple classes, I introduced an abstract Freight class to provide a common foundation while allowing each service to implement its own specialised behaviour.
+### Inheritance
+`Parcel`, `TrackedParcel` and `Removal` inherit common functionality from `Freight`, extending it with behaviour specific to each freight service. 
+### Interfaces
+Different freight services calculate their prices in different ways. By introducing a PriceQuoter interface, each service can implement its own pricing logic while still being used in a consistent way by the rest of the application.
+### Polymorphism
+Different freight types can be treated uniformly through the `PriceQuoter` interface, enabling client code to calculate prices without needing to know the specific subclass.
+### Method Overriding
+Subclasses override inherited methods where specialised behaviour is required, such as calculating prices or displaying freight information.
+
+### Class Hierachy
+```
+                     Freight
+                (Abstract Class)
+                        │
+        ┌───────────────┴─────────────┐
+        │                            │
+      Parcel                       Removal
+        │                            
+  TrackedParcel  
+    
+   PriceQuoter 
+   (Interface)  
+        ▲
+        │
+     Freight
+```
+
+---
+## Demonstration
+
+
+---
+## Reflections
+This project strengthened my understanding of inheritance hierarchies and demonstrated how polymorphism can simplify the design of software by allowing different vehicle types to be treated through a common interface. It also reinforced the importance of designing classes around shared behaviour in base classes rather than duplicating functionality across multiple subclasses.
+
+Before this project, I tended to think about classes individually. Designing this system helped me appreciate how a well-structured class hierarchy can reduce duplication and make new functionality easier to introduce. It also highlighted the value of designing around shared behaviour rather than immediately creating specialised classes.
+
+### Future Improvements
+* Introduce unit tests using JUnit.
+* Improve the validation of freight data.
+
+---
