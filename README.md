@@ -29,7 +29,7 @@ Different freight services calculate their prices in different ways. By introduc
                 (Abstract Class)
                         │
         ┌───────────────┴─────────────┐
-        │                            │
+        │                             │
       Parcel                       Removal
         │                            
   TrackedParcel  
