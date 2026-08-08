@@ -12,9 +12,7 @@ This project challenged me to design a small but extensible object model. Rather
 
 ---
 ## Design Highlights
-<- coupling & couhestion?
 The project separates shared freight behaviour into an abstract Freight class while allowing specialised freight services to extend and customise that behaviour. Pricing is represented through a dedicated interface, demonstrating how inheritance and interfaces can be combined to create a flexible object-oriented design.
-<-
 
 ### Inheritance & Abstract Classes
 `Parcel`, `TrackedParcel` and `Removal` inherit common functionality from `Freight`, extending it with behaviour specific to each freight service. 
@@ -47,12 +45,7 @@ Different freight services calculate their prices in different ways. By introduc
 
 ---
 ## Reflections 
-<- change this! (Responsible design?)
-This project strengthened my understanding of inheritance hierarchies and demonstrated how polymorphism can simplify the design of software by allowing different types to be treated through a common interface. It also reinforced the importance of designing classes around shared behaviour in base classes rather than duplicating functionality across multiple subclasses.
-<-
-
-
-Before this project, I tended to think about classes individually. Designing this system helped me appreciate how a well-structured class hierarchy can reduce duplication and make new functionality easier to introduce. It highlighted the value of designing around shared behaviour rather than immediately creating specialised classes with shared responsibilities.
+While working on this project I developed an understanding of Responsibility-driven design. Before completing this project, I tended to think about classes individually. Designing this system helped me appreciate the importance of well defined class responsibility and class hierarchies and well defined responsibilities. It highlighted the value of designing around shared behaviour rather than immediately creating specialised classes with shared responsibilities.
 
 ### Future Improvements
 * Introduce unit tests using JUnit.
