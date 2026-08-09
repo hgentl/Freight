@@ -45,7 +45,7 @@ Different freight services calculate their prices in different ways. By introduc
 
 ---
 ## Reflections 
-While working on this project I developed an understanding of Responsibility-driven design. Before completing this project, I tended to think about classes individually. Designing this system helped me appreciate the importance of well defined class responsibility and class hierarchies. It highlighted the value of designing around shared behaviour rather than immediately creating specialised classes with shared responsibilities.
+While working on this project I developed an understanding of Responsibility-driven design. Before completing this project, I tended to think about classes individually. Designing this system helped me appreciate the importance of well defined responsibility, class and inheritance hierarchies. It highlighted the value of designing around shared behaviour rather than immediately creating specialised classes with shared responsibilities.
 
 ### Future Improvements
 If I was to design a similar system today, I would improve the validation of freight data and I would introduce unit tests using JUnit.
