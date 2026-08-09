@@ -7,7 +7,7 @@ This project challenged me to design a small but extensible object model. Rather
 ### Features
 * Models different freight service types.
 * Calculates service prices based on freight characteristics.
-* Uses a common abstraction to represent different freight types
+* Uses a common abstraction to represent different freight types.
 * Demonstrates polymorphic price calculation through a shared interface.
 
 ---
@@ -48,6 +48,8 @@ Different freight services calculate their prices in different ways. By introduc
 While working on this project I developed an understanding of Responsibility-driven design. Before completing this project, I tended to think about classes individually. Designing this system helped me appreciate the importance of well defined responsibility, class and inheritance hierarchies. It highlighted the value of designing around shared behaviour rather than immediately creating specialised classes with shared responsibilities.
 
 ### Future Improvements
-If I was to design a similar system today, I would improve the validation of freight data and I would introduce unit tests using JUnit.
+If I was to design a similar system, I would:
+* Add validation of freight data. 
+* introduce unit tests using JUnit. 
 
 ---
