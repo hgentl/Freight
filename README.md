@@ -58,7 +58,23 @@ For example, `TrackedParcel` overrides `createQuote()` to add a tracking fee to 
 
 ## Demonstration
 
+The `Main.java` class provides a small demonstration of the project's main functionality and object-oriented design.
+
+It creates examples of `Parcel`, `TrackedParcel`, and `Removal` and demonstrates:
+
+* Creating and displaying different freight types.
+* Adding tracking information and parcel contents.
+* Checking parcel dimensions against the shipping limits.
+* Generating quotes using the different pricing implementations.
+* Treating different freight types through the common `Freight` abstraction.
+
+The demonstration also shows polymorphism by storing the different freight types in a `Freight` collection and calling the overridden `createQuote()` method on each object.
+
+
 **Note**: This project was originally developed using BlueJ as part of a university module focused on object-oriented design rather than building complete Java applications. To make the project easier to explore outside the university environment, I have added a small Main.java class that demonstrates the core functionality. The demonstration is intended to showcase the design of the classes rather than every aspect of the original assignment.
+
+
+
 ---
 
 ## Reflections 
