@@ -10,7 +10,7 @@
 public interface PriceQuoter
 {
     /**
-     * Q1,C,i
+     * 
      * Abstract method createQuote. Used in Parcel and Removal to create a
      * shipping Quote.
      * 
