@@ -13,26 +13,24 @@ This project challenged me to design a small but extensible object model. Rather
 * Stores tracking information and parcel contents for tracked parcels.
 * Calculates removal service prices based on freight volume.
 
----
-## Design Highlights
+### Design Highlights
 The project separates shared freight behaviour into an abstract `Freight` class while allowing specialised freight services to extend and customise that behaviour. Pricing is represented through a dedicated `PriceQuoter` interface, demonstrating how inheritance and interfaces can be combined to create a flexible object-oriented design.
-### Inheritance & Abstract Classes
+#### Inheritance & Abstract Classes
 `Parcel`, `TrackedParcel`, and `Removal` inherit common functionality from `Freight`, extending it with behaviour specific to each freight service.
 
 The different freight services share common information, such as delivery addresses and dispatch dates. Rather than duplicating this logic across multiple classes, I introduced an abstract `Freight` class to provide a common foundation while allowing each service to implement its own specialised behaviour.
 
 `TrackedParcel` also extends the existing `Parcel` class rather than duplicating its functionality. It adds tracking information, parcel contents, and an additional tracking fee while retaining the existing parcel behaviour.
-### Interfaces & Polymorphism
+#### Interfaces & Polymorphism
 Different freight services calculate their prices in different ways. The `PriceQuoter` interface defines a common contract for creating quotes, which is implemented by the abstract `Freight` class.
 
 The subclasses then provide their own implementations of `createQuote()` to apply the appropriate pricing rules. This allows different freight types to be treated consistently while retaining their own specialised pricing behaviour.
-### Method Overriding
+#### Method Overriding
 Several subclasses override inherited methods to provide specialised behaviour.
 
 For example, `TrackedParcel` overrides `createQuote()` to add a tracking fee to the standard parcel price. It also overrides `toString()` and `equals()` to include information specific to tracked parcels.
 
---- 
-## Class Hierarchy
+### Class Hierarchy
 ``` text
                PriceQuoter 
                (Interface)  
@@ -46,10 +44,7 @@ For example, `TrackedParcel` overrides `createQuote()` to add a tracking fee to 
         │                      │
       Parcel                 Removal
         │                            
-  TrackedParcel  
-    
-
-     
+  TrackedParcel       
 ```
 
 ---
