@@ -2,7 +2,7 @@
 This project was developed as part of my studies towards the Object-Oriented Java Programming module at The Open University. It models a freight company's booking system using object-oriented design principles to represent different freight services, their pricing rules, and their shared behaviour.
 
 ### Assignment Context
-This project challenged me to design a small but extensible object model. Rather than implementing each freight service independently, I identified the behaviour they shared and modelled it in a common base class, allowing specialised services to extend that functionality where required.
+This project challenged me to design a small but extendable object model. Rather than implementing each freight service independently, I identified the behaviour they shared and modelled it in a common base class, allowing specialised services to extend that functionality where required.
 
 ---
 
